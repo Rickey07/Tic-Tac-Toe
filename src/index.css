@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.board-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-info-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3,140px);
+    border: 2px solid rgb(25, 86, 86);
+    padding: 1rem 2rem;
+}
+
+.board .board-cell {
+    border: 3px solid black;
+    /* width: 120px; */
+    /* width: 100%; */
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board .board-cell:nth-child(1), .board .board-cell:nth-child(4), .board .board-cell:nth-child(7){
+    border-left: none;
+}
+
+
+.board .board-cell:nth-child(3), .board .board-cell:nth-child(6), .board .board-cell:nth-child(9){
+    border-right: none;
+}
+
+.board .board-cell:nth-child(1), .board .board-cell:nth-child(2), .board .board-cell:nth-child(3){
+    border-top: none;
+}
+
+.board .board-cell:nth-child(7), .board .board-cell:nth-child(8), .board .board-cell:nth-child(9){
+    border-bottom: none;
+}
+
+.x-player {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    transform:rotate(90deg);
+    -ms-transform:rotate(45deg); 
+    -webkit-transform:rotate(45deg); 
+}
+
+.x-player::after,.x-player::before {
+    content: "";
+    background: rgb(237, 86, 86);
+    position: absolute;
+    z-index: -1;
+}
+
+.x-player:before {
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+    height: 100%;
+  }
+  
+.x-player:after {
+    top: 50%;
+    height: 30%;
+    margin-top: -15%;
+    width: 100%;
+}
+
+.o-player {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(114, 228, 86);
+    border-radius: 50%;
+}
+
+.reset-button {
+    display: none;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: .5rem 2rem;
+    background-color: rgb(165, 230, 230);
+    outline: none;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+@media screen and (max-width:400px) {
+    
+.board {
+    display: grid;
+    grid-template-columns: repeat(3,70px);
+    border: 2px solid rgb(25, 86, 86);
+    padding: 1rem 2rem;
+}
+}
+  
+
