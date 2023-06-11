@@ -11,7 +11,7 @@ This is a web-based Tic Tac Toe game where two players can play against each oth
 
 ## Demo
 
-[Link to live demo](https://your-game-demo-url.com)
+[Link to live demo](https://tic-tac-ts.netlify.app/)
 
 
 ## Installation
@@ -35,7 +35,9 @@ cd tic-tac-toe
 
 ## Technologies Used
 
-- [List of technologies or frameworks used]
+- Typescript
+- Vanilla JS
+- CSS
 
 ## Contributing
 
